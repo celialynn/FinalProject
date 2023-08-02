@@ -9,12 +9,20 @@ import SwiftUI
 
 struct ThoughtsArchive: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
+                .ignoresSafeArea()
+            VStack {           
+                ForEach(archive) {thought in
+                    Text(thought.title)
+                }
+            }
+        }
     }
 }
 
 struct ThoughtsArchive_Previews: PreviewProvider {
     static var previews: some View {
-        ThoughtsArchive()
-    }
+       ThoughtsArchive()
+   }
 }

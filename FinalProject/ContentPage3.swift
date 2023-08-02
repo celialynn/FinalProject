@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentPage3: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
+                .ignoresSafeArea()
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 
