@@ -29,6 +29,7 @@ struct NotetakingPage: View {
                     
                     Spacer(minLength: 60.0)
                     TextEditor(text: $fullText)
+                        .colorMultiply(Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686))
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                         .navigationTitle("Thoughts")
