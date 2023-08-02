@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentPage1: View {
+    @State var read: Bool = false
     var body: some View {
         NavigationStack {
             VStack{
@@ -36,14 +37,19 @@ struct ContentPage1: View {
                 Image("checkmark")
                     .resizable()
                     .frame(width: 32.0, height: 32.0)
+                
+                Button {} label: {
+                    Image(systemName: "checkmark")}
+                
             }
+            
             .navigationTitle("Subject1")
-        }
-        }
-    }
-    struct ContentPage1_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentPage1()
+            
         }
     }
-
+            struct ContentPage1_Previews: PreviewProvider {
+                static var previews: some View {
+                    ContentPage1()}
+            }
+        }
+ 
