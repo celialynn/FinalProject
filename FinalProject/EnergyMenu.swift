@@ -1,19 +1,51 @@
-//
-//  EnergyMenu.swift
-//  FinalProject
-//
-//  Created by scholar on 03/08/2023.
-//
-
 import SwiftUI
 
 struct EnergyMenu: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                NavigationLink(destination: ContentPage2()) {
+                    Text("Kinetic energy")
+                }
+                NavigationLink(destination: ContentPage21()) {
+                    Text("Potential energy")
+                }
+                NavigationLink(destination: ContentPage22()) {
+                    Text("Energy of a flowing fluid")
+                }
+                 
+                
+                }
+            }
+            .listStyle(SidebarListStyle())
+            .navigationBarTitle("Energy - Menu", displayMode: .inline)
+            
+            
+        }
+    }
+
+
+struct SideMenu_Previews: PreviewProvider {
+    static var previews: some View {
+        EnergyMenu()
     }
 }
 
-struct EnergyMenu_Previews: PreviewProvider {
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+    
+        Group {
+            EnergyMenu()
+                .preferredColorScheme(.dark)
+        }
+          
+        
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         EnergyMenu()
     }

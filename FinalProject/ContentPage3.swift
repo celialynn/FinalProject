@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentPage3: View {
+    @State var showImage = false
     var body: some View {
         NavigationStack {
             ZStack {

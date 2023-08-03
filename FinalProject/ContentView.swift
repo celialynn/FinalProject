@@ -26,7 +26,7 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        NavigationLink(destination: ContentPage2()) {
+                        NavigationLink(destination: EnergyMenu()) {
                             Image("Energy")
                                 .resizable(resizingMode: .stretch)
                                 .cornerRadius(100)
@@ -51,7 +51,7 @@ struct ContentView: View {
                             .foregroundColor(Color(.black))
                     }
                     
-                    Image("progressbarEmpty")
+                    Image("progressbarOneThird")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .padding(.all)
