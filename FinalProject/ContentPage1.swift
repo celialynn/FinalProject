@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentPage1: View {
     @State var read: Bool = false
+    @State var showImage = false
+    var isOn: Bool = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -31,25 +34,37 @@ struct ContentPage1: View {
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     Text("Explanation 2")
-                    Spacer()
+                    Spacer(minLength: 350)
                     
                     NavigationLink(destination: NotetakingPage()) {
                         Text("Thoughts")}
                     
-                    Image("checkmark")
-                        .resizable()
-                        .frame(width: 32.0, height: 32.0)
+                   // var checkmark = Image("checkmark")
+                    
+                    if showImage {
+                        Image("CheckmarkBlack").resizable().aspectRatio(contentMode: .fill).frame(width: 32, height: 32)
+                     //   checkmark = checkmark.hidden()
+                    }
+                    
+                    Button() {
+                        showImage.toggle()
+                    } label: {
+                        Image("checkmark").resizable().aspectRatio(contentMode: .fill).frame(width: 32, height: 32)
                     
                 }
-                
-                .navigationTitle("Subject1")
-                
+               
+                }
             }
+            
+            .navigationTitle("Relativity")
+            
         }
     }
-            struct ContentPage1_Previews: PreviewProvider {
-                static var previews: some View {
-                    ContentPage1()}
-            }
-        }
- 
+    
+    struct ContentPage1_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentPage1()}
+    }
+    
+    
+}

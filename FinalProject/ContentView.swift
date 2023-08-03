@@ -4,7 +4,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
+                Color(red:0.9725490196078431, green:0.952941176470588, blue:0.8745098039215686)
                     .ignoresSafeArea()
                 VStack {
                     
@@ -12,7 +12,7 @@ struct ContentView: View {
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
-                        .frame(width: 280)
+                        .frame(width: 300)
                     Spacer()
                     
                     
@@ -27,52 +27,50 @@ struct ContentView: View {
                     HStack {
                         
                         NavigationLink(destination: ContentPage2()) {
-                            Image("button")
+                            Image("Energy")
                                 .resizable(resizingMode: .stretch)
-                                .aspectRatio(contentMode: .fit)
-                                .clipShape(Circle())
-                                .frame(width: 225)
+                                .cornerRadius(100)
+                                .frame(width: 155, height: 155)
                         }
+                        
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        
                         NavigationLink(destination: ContentPage3()) {
-                            Image("button")
+                            Image("NewtonsLaws")
                                 .resizable(resizingMode: .stretch)
-                                .aspectRatio(contentMode: .fit)
-                                .clipShape(Circle())
-                                .frame(width: 225)
+                                .cornerRadius(100)
+                                .frame(width: 150, height: 150)
                         }
                     }
                     Spacer()
                     
                     NavigationLink(destination: ThoughtsArchive()) {
-                        Text("Thoughts")
+                        Text("Archive")
                             .font(.title)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color(.black))
+                    }
+                    
+                    Image("progressbarEmpty")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all)
+                    
+//                    if showImage {
+//                        Image("progressbarOneThird") .resizable(resizingMode: .stretch)
+//                            .aspectRatio(contentMode: .fit)
+//                            .padding(.all)
                         
                     }
-                    Spacer()
-                    
-                    Text("Progress bar - to be edited")
-                    
-                    
-                    
-                    
                 }
             }
-            
-            
-            
-            
         }
         
         
-    }
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+            }
         }
     }
-    
-}
+
