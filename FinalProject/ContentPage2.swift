@@ -34,14 +34,14 @@ struct ContentPage2: View {
                                 .ignoresSafeArea()
         
                             Text("""
-                           • m : mass (measured in kilograms)
-                           • v : velocity (measured in metres per second)
-                           • E : kinetic energy (measured in joules)
+                        • m : mass (measured in kilograms)
+                        • v : velocity (measured in metres per second)
+                        • E : kinetic energy (measured in joules)
                        """)
                             .ignoresSafeArea()
                             .padding()
         
-                            Text("In relativistic mechanics, this is a good approximation only when v is much less than the speed of light (c). For other cases :")
+                            Text("In relativistic mechanics:")
                                 .multilineTextAlignment(.center)
                                 .ignoresSafeArea()
         
@@ -51,10 +51,10 @@ struct ContentPage2: View {
                                 .ignoresSafeArea()
         
                             Text("""
-                           • m : mass (measured in kilograms)
-                           • v : velocity (measured in metres per second)
-                           • E : kinetic energy (measured in joules)
-                           • c : speed of light in vacuum (measured in m/s)
+                        • m : mass (measured in kilograms)
+                        • v : velocity (measured in metres per second)
+                        • E : kinetic energy (measured in joules)
+                        • c : speed of light in vacuum (measured in m/s)
                        """)
                             .padding(.all)
                             NavigationLink(destination: NotetakingPage()) {
@@ -67,29 +67,27 @@ struct ContentPage2: View {
                                 Image("CheckmarkBlack").resizable().aspectRatio(contentMode: .fill).frame(width: 32, height: 32)
         
                             }
-        
+                            
+                            
                             Button() {
                                 showImage.toggle()
                             } label: {
                                 Image("checkmark").resizable().aspectRatio(contentMode: .fill).frame(width: 32, height: 32)
-        
-                            }
+
                         }
-                        .padding(.all)
-        
-                    }
+                        }
+                           }
                        }
-                 .navigationTitle("Energy")
-                 .navigationBarHidden(true)
+        //         .navigationTitle("Energy")
+                 .navigationBarHidden(false)
             }
-        
-    }
-
-    struct ContentPage2_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentPage1()}
-    }
-
+                }
+            
+        struct ContentPage2Previews: PreviewProvider {
+                static var previews: some View {
+                    ContentPage1()}
+            }
+            
     
 
 

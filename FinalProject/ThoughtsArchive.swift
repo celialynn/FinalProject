@@ -12,9 +12,13 @@ struct ThoughtsArchive: View {
         ZStack {
             Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
                 .ignoresSafeArea()
-            VStack {           
+            VStack {
+                Image("Archive")
+                Spacer()
                 ForEach(archive) {thought in
                     Text(thought.title)
+                Spacer()
+                Spacer()
                 }
             }
         }

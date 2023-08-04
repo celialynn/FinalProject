@@ -18,13 +18,11 @@ struct ContentPage21: View {
                 Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
                     .ignoresSafeArea()
                 VStack {
-                    
-                    Text("Energy")
-                                   .font(.title)
-                                   .padding()
+                    Image("EnergyTop")
 
-                                           
-                               Text("Potential energy")
+                    Text("Potential energy")
+                        .fontWeight(.bold)
+                    
                                    .padding()
                                Text("Potential energy is the energy by virtue of an object's position relative to other objects.")
                                    .multilineTextAlignment(.center)
@@ -40,7 +38,7 @@ struct ContentPage21: View {
                                Text("The more formal definition is that potential energy is the energy difference between the energy of an object in a given position and its energy at a reference position.")
                                    .multilineTextAlignment(.center)
                                    .padding()
-                    
+                    Spacer()
                     NavigationLink(destination: NotetakingPage()) {
                         Text("Thoughts")}
                     
@@ -61,8 +59,8 @@ struct ContentPage21: View {
                 }
                    }
                }
-         .navigationTitle("Energy")
-         .navigationBarHidden(true)
+//         .navigationTitle("Energy")
+         .navigationBarHidden(false)
     }
         }
     

@@ -2,26 +2,41 @@ import SwiftUI
 
 struct EnergyMenu: View {
     var body: some View {
+        
         NavigationView {
-            List {
-                NavigationLink(destination: ContentPage2()) {
-                    Text("Kinetic energy")
+            ZStack {
+                Color(red:0.9725490196078431 , green:0.952941176470588, blue:0.8745098039215686)
+                    .ignoresSafeArea()
+                VStack{
+                    List {
+                        NavigationLink(destination: ContentPage2()) {
+                            Text("Kinetic energy")
+                        }
+                        NavigationLink(destination: ContentPage21()) {
+                            Text("Potential energy")
+                        }
+                        NavigationLink(destination: ContentPage22()) {
+                            Text("Energy of a flowing fluid")
+                        }
+                        
+                        
+                    }
+                    .scrollContentBackground(.hidden)
+                    
+                    Image("Comment")
+                        .resizable(resizingMode: .stretch)
+                        .frame(width: 50, height: 50)
                 }
-                NavigationLink(destination: ContentPage21()) {
-                    Text("Potential energy")
-                }
-                NavigationLink(destination: ContentPage22()) {
-                    Text("Energy of a flowing fluid")
-                }
-                 
                 
-                }
+                
+
             }
             .listStyle(SidebarListStyle())
-            .navigationBarTitle("Energy - Menu", displayMode: .inline)
+            .navigationBarTitle("Energy", displayMode: .inline)
             
             
         }
+    }
     }
 
 

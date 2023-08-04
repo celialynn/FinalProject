@@ -19,7 +19,7 @@ class Thought: Identifiable {
 }
 
 struct NotetakingPage: View {
-    @State var fullText: String = "Delete this and type your thoughts..."
+    @State var fullText: String = ""
     var body: some View {
         NavigationStack {
             ZStack {
